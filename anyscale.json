@@ -1,0 +1,14 @@
+[
+    {
+      "Name": "Nvidia",
+      "Language": "English",
+      "BaseURL": "https://github.com/CloudLabsAI-Azure/Dynamo_on_AKS/",
+      "Files": [
+                
+          {
+          "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/Dynamo_on_AKS/refs/heads/main/anyscale.md",
+          "Order": 1
+        }
+      ]
+    }
+  ]
