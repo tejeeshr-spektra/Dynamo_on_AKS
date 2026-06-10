@@ -68,6 +68,53 @@ Client → LoadBalancer :8000
 
 When **TTFT p95 > 300 ms**, KEDA scales up Decode Workers from **2 → 4** replicas. Scale-down cooldown is 120 s.
 
+## Task 1: 
+
+1. From the Lab VM, select **Visual Studio Code
+        ![](images/w14.png)
+
+1. Click the **More Actions (⋯) (1)**, select **Terminal** **(2)**, and then click **New Terminal** **(3)** to open a new integrated terminal.
+        ![](images/w15.png)
+
+1. Clone the repository by running the following command:
+
+   ```bash
+   git clone "https://github.com/maljazaery/Dynamo_on_AKS.git"
+   ```
+
+   ![](images/w16.png)
+
+1. Click **OneDrive** **(1)**, select the **Dynamo_on_AKS** folder **(2)**, and then click **Select Folder** **(3)** to open the repository in Visual Studio Code.
+
+    ![](images/w17.png)
+
+1. When prompted, select **Yes, I trust the authors**.
+        ![](images/w18.png)
+
+1. In the Explorer pane, expand the **DYNAMO_ON_AKS**  **(1)**, open the **autoscaling_agg_keda** folder **(2)**, and then select the **dynamo-keda.ipynb** notebook file **(3)**.
+
+   ![](images/w19.png)
+
+1. In the **Environment Configuration** section, update the **CLUSTER_NAME** value by replacing **XXXXXX** **(1)** with a **Cloud DID**, and then click the **Run Cell** button **(2)** to execute the configuration cell.
+
+   ![](images/w20.png)
+
+1. Verify that the configuration cell has executed successfully by confirming that a green check mark and execution status are displayed at the bottom of the cell.
+
+   ![](images/w21.png)
+
+1. In the **Provision AKS Cluster & GPU Node Pool** section, click the **Run Cell** button to execute the AKS cluster provisioning command and create the system node pool.
+
+   ![](images/w22.png)
+
+1. After the command completes, verify that the AKS cluster was created successfully by reviewing the JSON output, which should resemble the output shown below.
+
+   ![](images/w23.png)
+
+1. Click the **Run Cell** button to execute the GPU node pool provisioning command, and verify that the operation completes successfully by confirming that the output displays the node pool configuration details in JSON format, similar to the output shown below.
+
+   ![](images/w24.png)
+
 
 > See [autoscaling_agg_keda/dynamo-keda.ipynb](./autoscaling_agg_keda/dynamo-keda.ipynb) for the full step-by-step guide.
 
