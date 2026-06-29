@@ -1,9 +1,73 @@
+
 # Dynamo On AKS
 
 End-to-end tutorials for running [NVIDIA Dynamo](https://github.com/ai-dynamo/dynamo) on **Azure Kubernetes Service (AKS)**, integrated with **Azure Managed Prometheus** and **Grafana**, showcasing different inference serving architectures and autoscaling strategies for LLM workloads.
 
 
 ![image-alt-text](autoscaling_agg_keda/img/vllm_dashboard.png)
+
+
+
+
+## Getting Started with the lab
+
+Welcome to your **Dynamo on AKS** workshop. Let's begin by making the most of this experience.
+
+## Virtual Machine & Lab Guide
+
+Your virtual machine is your workhorse throughout the workshop. The lab guide is your roadmap to success.
+
+## Accessing Your Lab Environment
+
+Once you're ready to dive in, your virtual machine and **Guide** will be right at your fingertips within your web browser.
+
+![Access Your VM and Lab Guide](media/gs0.png)
+
+## Lab Guide Zoom In/Zoom Out
+
+To adjust the zoom level for the environment page, click the **A↕ : 100%** icon located next to the timer in the lab environment.
+
+![](./media/gs1.png)
+
+## Exploring Your Lab Resources
+
+To get a better understanding of your lab resources and credentials, navigate to the **Environment** tab.
+
+![Explore Lab Resources](./media/gs1.1.png)
+
+## Utilizing the Split Window Feature
+
+For convenience, you can open the lab guide in a separate window by selecting the **Split Window** button from the Top right corner.
+
+![Use the Split Window Feature](./media/gs1.2.png)
+
+## Managing Your Virtual Machine
+
+Feel free to **Start, Stop, or Restart (2)** your virtual machine as needed from the **Resources (1)** tab. Your experience is in your hands!
+
+![Manage Your Virtual Machine](media/VMSS.png)
+
+## Let's Get Started with Azure Portal
+
+1. On your virtual machine, click on the Azure Portal icon.
+
+2. You'll see the **Sign into Microsoft Azure** tab. Here, enter your **credentials (1)** and select **Next (2)**:
+
+   - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
+
+     ![Enter Your Username](media/odlusr.png)
+
+3. Next, provide your **Temporary Access pass (1)**, enter the password and select **Sign In (2)**:
+
+    - Enter **Temporary Access Pass:** <inject key="AzureAdUserPassword"></inject> **(1)**
+
+      ![](./media/image.png)
+
+4. If **Action required** pop-up window appears, click on **Ask later**.
+5. If prompted to **stay signed in**, you can click **No**.
+6. If a **Welcome to Microsoft Azure** pop-up window appears, simply click **"Cancel"** to skip the tour.
+
+
 
 
 ---
@@ -120,49 +184,6 @@ When **TTFT p95 > 300 ms**, KEDA scales up Decode Workers from **2 → 4** repli
 
 
 
----
-
-### 2. Autoscaling Disaggregated Serving with Dynamo Planner
-
-> **Status: 🚧 In Progress**
-
-**What it demonstrates:**
-
-Deploys Dynamo in **disaggregated serving** mode, separating **Prefill** and **Decode** workers onto dedicated pods. The **Dynamo Planner** continuously monitors queue depths and GPU utilization to dynamically rebalance the Prefill-to-Decode worker ratio without requiring an external autoscaler.
-
-**Architecture:**
-
-```
-Client → LoadBalancer :8000
-           └─ Frontend pods
-                   ├─ Prefill Worker pods  (planner-managed)
-                   └─ Decode Worker pods   (planner-managed)
-```
-
-**Key concepts:**
-- Disaggregated Prefill/Decode for improved GPU memory efficiency
-- Dynamo Planner controls replica ratios based on live load signals
-- Integration with Azure Managed Prometheus for observability
-
-
-
-
----
-
-### 3. KV Cache Routing
-
-> **Status: 🚧 In Progress**
-
-**What it demonstrates:**
-
-Implements **KV cache-aware request routing** to maximize KV cache reuse across Decode Worker pods. Requests with overlapping prompt prefixes are steered to the worker that already holds the relevant KV cache blocks, reducing redundant computation and improving throughput.
-
-**Key concepts:**
-- Prefix-aware load balancing for LLM inference
-- Reduced KV cache eviction under high-concurrency workloads
-- Grafana dashboards for cache hit rate and routing efficiency
-
----
 
 
 
@@ -171,3 +192,19 @@ Implements **KV cache-aware request routing** to maximize KV cache reuse across 
 
 Contributions and issue reports are welcome. Please open a GitHub Issue or Pull Request.
 
+## Support Contact
+
+The CloudLabs support team is available 24/7, 365 days a year, via email and live chat to ensure seamless assistance at any time. We offer dedicated support channels tailored specifically for both learners and instructors, ensuring that all your needs are promptly and efficiently addressed.
+
+Learner Support Contacts:
+
+- Email Support: [cloudlabs-support@spektrasystems.com](mailto:cloudlabs-support@spektrasystems.com)
+- Live Chat Support: https://cloudlabs.ai/labs-support
+
+Click **Next** from the bottom right corner to embark on your Lab journey!
+
+![Start Your Azure Journey](./media/PageNo.png)
+
+Now you're all set to explore the powerful world of technology. Feel free to reach out if you have any questions along the way. Enjoy your workshop!
+
+---
