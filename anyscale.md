@@ -55,11 +55,28 @@ Before starting this lab, ensure you have the following credentials available fr
 
 1. Open your browser and navigate to **[https://console.anyscale.com](https://console.anyscale.com)**.
 
-2. On the login page, click **Sign in with SSO** or enter your credentials:
+2. On the login page, enter your **email address** in the email field and click **Continue** (do **not** use any third-party SSO buttons):
+   - **Email**: <inject key="AzureAdUserEmail"></inject>
+
+   ![Enter Your Email](screenshots/01a-login-email.png)
+
+3. Anyscale sends a **one-time passcode (OTP)** to your mailbox. Keep this Anyscale tab open — you will return to it after retrieving the code.
+
+4. Open a **new browser tab** and go to **[https://outlook.office.com](https://outlook.office.com)**. Sign in with your lab credentials to open your mailbox:
    - **Email**: <inject key="AzureAdUserEmail"></inject>
    - **Password**: <inject key="AzureAdUserPassword"></inject>
 
-3. After successful authentication, you will be redirected to the Anyscale **Home** page displaying a welcome message.
+   ![Sign in to Outlook](screenshots/01b-outlook-login.png)
+
+5. In the inbox, open the latest email from **Anyscale** and copy the **verification code (OTP)**.
+
+   ![Anyscale OTP Email](screenshots/01c-otp-email.png)
+
+6. Switch back to the **Anyscale** tab, paste the **OTP** into the verification field, and click **Continue** to complete sign-in.
+
+   ![Enter the OTP](screenshots/01d-enter-otp.png)
+
+7. After successful verification, you will be redirected to the Anyscale **Home** page displaying a welcome message.
 
    ![Anyscale Home Page](screenshots/01-home-page.png)
 
