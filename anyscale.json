@@ -6,7 +6,7 @@
       "Files": [
                 
           {
-          "RawFilePath": "https://raw.githubusercontent.com/Dynamo_on_AKS/terraform-kubernetes-anyscale-foundation-modules/refs/heads/main/anyscale-lab-guide.md",
+          "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/Dynamo_on_AKS/refs/heads/main/anyscale.md",
           "Order": 1
         }
       ]
