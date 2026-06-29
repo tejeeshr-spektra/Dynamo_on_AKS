@@ -42,3 +42,10 @@ spec:
           args:
             - --model
             - Qwen/Qwen3-0.6B
+            # The gpupool GPU is an NVIDIA A10-24Q vGPU: only ~23.7 GiB is visible and
+            # ~21.34 GiB is free at startup. vLLM's default --gpu-memory-utilization of 0.9
+            # needs 21.35 GiB, which is just over what's free, so the engine crashes with
+            # "Free memory ... is less than desired GPU memory utilization". Qwen3-0.6B is
+            # tiny, so 0.8 is plenty and leaves headroom for the vGPU's reserved slice.
+            - --gpu-memory-utilization
+            - "0.8"
