@@ -1,4 +1,12 @@
 
+<style>
+img {
+  border: 1px solid #d0d7de;
+  border-radius: 6px;
+  padding: 4px;
+}
+</style>
+
 # Getting Started with Anyscale on Azure
 
 ## Overview
