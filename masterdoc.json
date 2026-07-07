@@ -6,8 +6,12 @@
       "Files": [
                 
           {
-          "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/Dynamo_on_AKS/refs/heads/main/README.md",
+          "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/Dynamo_on_AKS/refs/heads/main/gettingstarted.md",
           "Order": 1
+          },
+          {
+          "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/Dynamo_on_AKS/refs/heads/main/Lab01.md",
+          "Order": 2
         }
       ]
     }
