@@ -135,7 +135,8 @@ When **TTFT p95 > 300 ms**, KEDA scales up Decode Workers from **2 → 4** repli
 ## Task 1: 
 
 1. From the Lab VM, select **Visual Studio Code
-        ![](images/w14.png)
+
+   ![](images/w14.png)
 
 1. Click the **More Actions (⋯) (1)**, select **Terminal** **(2)**, and then click **New Terminal** **(3)** to open a new integrated terminal.
         ![](images/w15.png)
